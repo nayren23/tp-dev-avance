@@ -5,7 +5,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,7 +22,7 @@ public class AnnonceDAO extends DAO<Annonce>{
             preparedStatement = this.connect.prepareStatement(sql);
             preparedStatement.setString(1, obj.getTitle());
             preparedStatement.setString(2, obj.getDescription());
-            preparedStatement.setString(3, obj.getAdresse());
+            preparedStatement.setString(3, obj.getAddress());
             preparedStatement.setString(4, obj.getMail());
 
             int result = preparedStatement.executeUpdate();

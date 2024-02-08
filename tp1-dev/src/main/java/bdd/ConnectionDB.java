@@ -4,9 +4,9 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 public class ConnectionDB {
-    private String url = "jdbc:postgresql://5.135.143.117/test_db";
+    private String url = "jdbc:postgresql://localhost:5432/rayan";
     private String user = "rayan";
-    private String passwd = "LfpIhasg1A79TLNAxX9k";
+    private String passwd = "nayren123";
     /**
      * Objet Connection
      */

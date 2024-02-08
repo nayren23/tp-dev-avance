@@ -3,19 +3,17 @@ package com.example.tp1dev;
 import java.io.*;
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
 
 import bdd.AnnonceDAO;
 import bdd.ConnectionDB;
-import bdd.DAO;
 import bean.Annonce;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 
-    @WebServlet(name = "annonceListServlet", value = "/annonce-list-servlet")
+@WebServlet(name = "annonceListServlet", value = "/annonce-list-servlet")
 public class AnnonceListServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -31,11 +29,17 @@ public class AnnonceListServlet extends HttpServlet {
             AnnonceDAO annonceDAO = new AnnonceDAO(conn);
             List<Annonce> annonces = annonceDAO.fetchAll();
 
+            for(int i = 0; i<annonces.size(); i++ ){
+                System.out.println("testttttt");
+                System.out.println(annonces.get(i).getAddress());
+            }
+
             // Mettre la liste des annonces dans l'attribut de la requête
             request.setAttribute("annonces", annonces);
 
             // Dispatcher vers la JSP pour afficher la liste
             RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/AnnonceList.jsp");
+            dispatcher.forward(request, response);
 
         } catch (SQLException  e) {
             e.printStackTrace();
@@ -43,4 +47,5 @@ public class AnnonceListServlet extends HttpServlet {
             response.sendRedirect(request.getContextPath() + "/error.jsp");
         }
     }
+
 }
