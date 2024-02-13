@@ -6,21 +6,21 @@ public class Annonce {
     private String title;
     private String description;
     private String mail;
-    private String adresse;
+    private String address;
 
     public Annonce(int id, String title, String description, String mail, String adresse) {
         this.id = id;
         this.title = title;
         this.description = description;
         this.mail = mail;
-        this.adresse = adresse;
+        this.address = adresse;
     }
 
     public Annonce(String title, String description, String mail, String adresse) {
         this.title = title;
         this.description = description;
         this.mail = mail;
-        this.adresse = adresse;
+        this.address = adresse;
     }
 
     public int getId() {
@@ -55,11 +55,11 @@ public class Annonce {
         this.mail = mail;
     }
 
-    public String getAdresse() {
-        return adresse;
+    public String getAddress() {
+        return address;
     }
 
-    public void setAdresse(String adresse) {
-        this.adresse = adresse;
+    public void setAddress(String address) {
+        this.address = address;
     }
 }

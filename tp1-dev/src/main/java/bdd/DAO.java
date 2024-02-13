@@ -16,7 +16,5 @@ public abstract class DAO<T> {
     public abstract boolean update(T entity) throws SQLException;
     public abstract boolean delete(int id) throws SQLException;
     public abstract T read(int id) throws SQLException;
-
     public abstract List<T> fetchAll() throws SQLException;
-
 }

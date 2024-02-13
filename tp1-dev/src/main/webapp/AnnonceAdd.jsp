@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Ajouter une Annonce</title>
+    <title>Ajout d'Annonce</title>
     <!-- Ajouter le lien vers la bibliothèque Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
@@ -39,6 +39,7 @@
 
         <button type="submit" class="btn btn-primary">Ajouter</button>
     </form>
+        
 </div>
 
 <!-- Ajouter le lien vers le script Bootstrap (jQuery et Popper.js sont requis pour Bootstrap) -->
