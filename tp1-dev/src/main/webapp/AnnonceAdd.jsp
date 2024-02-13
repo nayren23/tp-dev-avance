@@ -39,6 +39,7 @@
 
         <button type="submit" class="btn btn-primary">Ajouter</button>
     </form>
+        
 </div>
 
 <!-- Ajouter le lien vers le script Bootstrap (jQuery et Popper.js sont requis pour Bootstrap) -->
